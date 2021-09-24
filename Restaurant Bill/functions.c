@@ -6,23 +6,33 @@
 int getMealNumber(){
     //gets a random number accosiated with a meal
 
-    int mealNumber;
-
     time_t t;
 
-    //init random number generator
-    //keep time moving
-    //w/o will be pseudo rand
     srand((unsigned) time(&t));
-
-    // print 5 random numbers from 0-49 (goes to 49 cuz of 50)
-
-    // for(int i = 0 ; i<1; i++){
-    //     mealNumber = rand() %4 + 1;
-    //     printf("%d", mealNumber);
-    // }
 
     return(rand() %4 + 1);
 }
-double getMealTax(int meal, int tax);
-double getMealTips(int meal, int tips);
+
+double getMealTax(double mealCost, double tax){
+    double mealTax;
+    double taxRate;
+
+    taxRate = (tax / 100.0);
+
+    mealTax = taxRate * mealCost;
+
+    return mealTax;
+
+}
+
+
+double getMealTips(double mealCost, double tips){
+    double mealTip;
+    double tipRate;
+
+    tipRate = tips/100.0;
+    
+    mealTip = mealCost * tipRate;
+
+    return mealTip;
+}

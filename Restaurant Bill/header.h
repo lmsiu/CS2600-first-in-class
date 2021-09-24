@@ -6,8 +6,8 @@
 
 #define HEADER_h
 int getMealNumber();
-double getMealTax(int meal, int tax);
-double getMealTips(int meal, int tips);
+double getMealTax(double mealCost, double tax);
+double getMealTips(double mealCost, double tips);
 
 
 #endif

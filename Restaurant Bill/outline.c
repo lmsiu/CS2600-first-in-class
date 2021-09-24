@@ -16,10 +16,10 @@
 void main(){
     int tip, tax;
 
-    printf("How much is tax in the country you are in? (Please enter the value with out the pecent sign)");
+    printf("What is the tax rate where you are located? (Please enter the value as a whole number with out the pecent sign. Example: If tax is %12, enter 12)");
     scanf("%d", tax);
 
-    printf("How much would you like to add for tip?");
+    printf("What percent would you like to tip? Please enter tip percentage as a whole number with out the percent sign. Example: %20 = 20");
     scanf("%d", &tip);
 
     
