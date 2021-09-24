@@ -16,7 +16,7 @@
 #include <string.h>
 
 void main(){
-    int tip, tax;
+    double tip, tax;
     int mealNumber;
     double mealCost;
 
@@ -28,10 +28,14 @@ void main(){
     char mealName[9];
 
     printf("What is the tax rate where you are located? (Please enter the value as a whole number with out the pecent sign. Example: If tax is %12, enter 12)\n");
-    scanf("%d", &tax);
+    scanf("%lf", &tax);
+
+    tax = checkNegative(tax);
 
     printf("What percent would you like to tip? Please enter tip percentage as a whole number with out the percent sign. Example: %20 = 20\n");
-    scanf("%d", &tip);
+    scanf("%lf", &tip);
+
+    tip = checkNegative(tip);
 
     mealNumber = getMealNumber();
 
@@ -55,7 +59,7 @@ void main(){
         break;
     }
 
-    printf("Meal: %s, Cost: %.2f\n", mealName, mealCost);
+    printf("Meal ordered: %s, Cost: %.2f\n", mealName, mealCost);
 
     taxAmount = getMealTax(mealCost, tax);
     tipAmount = getMealTips(mealCost, tip);

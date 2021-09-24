@@ -9,5 +9,7 @@ int getMealNumber();
 double getMealTax(double mealCost, double tax);
 double getMealTips(double mealCost, double tips);
 
+double checkNegative(double value);
+
 
 #endif

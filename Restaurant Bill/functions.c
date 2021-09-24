@@ -36,3 +36,12 @@ double getMealTips(double mealCost, double tips){
 
     return mealTip;
 }
+
+double checkNegative(double value){
+    while(value < 0.0){
+        printf("Percent can't be less than 0. Please enter the percent: ");
+        scanf("%lf", &value);
+    }
+
+    return value;
+}
