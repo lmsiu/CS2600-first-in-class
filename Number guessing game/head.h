@@ -4,7 +4,8 @@
 
 #define HEAD_H
 int menu();
-int chooseValue();
-void checkCorrect();
+int chooseValue(int max);
+void checkCorrect(int input, int correctAnswer);
+int changeMax();
 
 #endif 

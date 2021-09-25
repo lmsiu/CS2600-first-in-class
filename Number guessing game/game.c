@@ -6,10 +6,13 @@
 5. Set up 'q' functionality
 6. save_user_max_number*/
 #include <stdio.h>
-
-
-
+#include "head.h"
 
 void main(){
+    int max = 10;
+    int guess;
+    int menuPicked;
+
+    menuPicked = menu();
 
 }
