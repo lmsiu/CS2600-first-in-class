@@ -48,4 +48,6 @@ void main(){
 
     }
 
+    printf("Thanks for playing");
+
 }
