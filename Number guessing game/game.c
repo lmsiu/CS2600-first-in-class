@@ -7,11 +7,21 @@
 6. save_user_max_number*/
 #include <stdio.h>
 #include "head.h"
+#include <stdlib.h>
 
 void main(){
-    int max = 10;
+    FILE *fp;
+    char buff[225];
+
+    fp = fopen("maxFile.txt", "r+");
+    
+    fgets(buff, 225, (FILE*)fp);
+
+    int max = atoi(buff);
     int guess;
     int menuPicked;
+
+    
 
     //for 1
     int correctAnswer, userAnswer;
@@ -49,5 +59,7 @@ void main(){
     }
 
     printf("Thanks for playing");
+    fprintf(fp, "%d", max);
+    fclose(fp);
 
 }
