@@ -20,7 +20,6 @@ void main(){
     int newMax;
 
     menuPicked = menu();
-    printf("%d\n", menuPicked);
 
     while(menuPicked != 3){
     switch (menuPicked)
