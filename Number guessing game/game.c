@@ -5,3 +5,11 @@
 4. Set up options
 5. Set up 'q' functionality
 6. save_user_max_number*/
+#include <stdio.h>
+
+
+
+
+void main(){
+
+}
