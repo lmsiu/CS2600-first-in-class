@@ -3,6 +3,7 @@
 #include "head.h"
 #include <time.h>
 
+//displays game value
 int menu(){
     int menuChoice;
     
@@ -12,5 +13,19 @@ int menu(){
     scanf("%d", &menuChoice);
 
     return menuChoice;
+
+}
+
+//value for option 1
+int chooseValue(){
+    int value;
+    time_t t;
+
+    srand((unsigned) time(&t));
+
+    value = rand() % 10 + 1;
+
+    return value;
+
 
 }

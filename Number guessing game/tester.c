@@ -3,5 +3,6 @@
 
 
 void main(){
-    printf("%d", menu());
+    // printf("%d", menu());
+    printf("%d", chooseValue());
 }
