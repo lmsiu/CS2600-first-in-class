@@ -31,10 +31,6 @@ int chooseValue(int max){
 
 //check if the input is correct for option 1
 void checkCorrect(int input, int correctAnswer){
-    if(input == correctAnswer){
-        printf("You won!");
-        menu();
-    } 
 
     while(input != correctAnswer){
     if(input > correctAnswer){
@@ -46,5 +42,22 @@ void checkCorrect(int input, int correctAnswer){
     }
     }
 
+    printf("You won!\n");
+
 }
 
+int checkNewMax(int value){
+    while(value < 0 ){
+        printf("Value can not be less than zero. Please enter another new maximum");
+        scanf("%d", &value);
+    }
+
+    while(value > INT_MAX){
+        printf("Value can not be higher than %d. Please enter another new maximum", INT_MAX);
+        scanf("%d", &value);
+    }
+
+    return value;
+
+
+}

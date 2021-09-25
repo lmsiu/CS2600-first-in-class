@@ -5,5 +5,5 @@
 void main(){
     // printf("%d", menu());
     // printf("%d", chooseValue());
-    // checkCorrect(10, 9);
+    checkCorrect(5, 6);
 }
